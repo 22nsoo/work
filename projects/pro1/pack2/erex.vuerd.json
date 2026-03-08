@@ -1,0 +1,299 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dineug/erd-editor/main/json-schema/schema.json",
+  "version": "3.0.0",
+  "settings": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -61.4305,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": 431,
+    "database": 4,
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": 1,
+    "tableNameCase": 4,
+    "columnNameCase": 2,
+    "bracketType": 1,
+    "relationshipDataTypeSync": true,
+    "relationshipOptimization": false,
+    "columnOrder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "maxWidthComment": -1,
+    "ignoreSaveSettings": 0
+  },
+  "doc": {
+    "tableIds": [
+      "7hiSPOyzmyxxJ7LBhiB6o",
+      "6u15NmqCJK3AxemKXX5mp"
+    ],
+    "relationshipIds": [
+      "_DTFwEMvNs0u7OFkxg5QK"
+    ],
+    "indexIds": [],
+    "memoIds": []
+  },
+  "collections": {
+    "tableEntities": {
+      "7hiSPOyzmyxxJ7LBhiB6o": {
+        "id": "7hiSPOyzmyxxJ7LBhiB6o",
+        "name": "buser",
+        "comment": "",
+        "columnIds": [
+          "LEjAIBFbtGTI-2H2Am88D",
+          "SV4zztUM1_MmLEdlQrkTJ",
+          "u5ZRDuH-Ur3EBWBtIPhQ0"
+        ],
+        "seqColumnIds": [
+          "LEjAIBFbtGTI-2H2Am88D",
+          "SV4zztUM1_MmLEdlQrkTJ",
+          "u5ZRDuH-Ur3EBWBtIPhQ0",
+          "fSwTIzG-D9_V_VUCv9fxI"
+        ],
+        "ui": {
+          "x": 200,
+          "y": 101,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1771901678387,
+          "createAt": 1771901449664
+        }
+      },
+      "6u15NmqCJK3AxemKXX5mp": {
+        "id": "6u15NmqCJK3AxemKXX5mp",
+        "name": "jikwon",
+        "comment": "",
+        "columnIds": [
+          "wcDy9I06GaS3hMm_g-cGr",
+          "x_vpnL4X6sPayQZ4POTH0",
+          "gKq8IbLmGb_UEH_8zxG_g",
+          "jrtxGi7AY9Q2J_OzSlUWF"
+        ],
+        "seqColumnIds": [
+          "wcDy9I06GaS3hMm_g-cGr",
+          "x_vpnL4X6sPayQZ4POTH0",
+          "gKq8IbLmGb_UEH_8zxG_g",
+          "jrtxGi7AY9Q2J_OzSlUWF"
+        ],
+        "ui": {
+          "x": 195,
+          "y": 361,
+          "zIndex": 51,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1771902146412,
+          "createAt": 1771901705461
+        }
+      }
+    },
+    "tableColumnEntities": {
+      "LEjAIBFbtGTI-2H2Am88D": {
+        "id": "LEjAIBFbtGTI-2H2Am88D",
+        "tableId": "7hiSPOyzmyxxJ7LBhiB6o",
+        "name": "buserno",
+        "comment": "",
+        "dataType": "INT",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901526288,
+          "createAt": 1771901459668
+        }
+      },
+      "SV4zztUM1_MmLEdlQrkTJ": {
+        "id": "SV4zztUM1_MmLEdlQrkTJ",
+        "tableId": "7hiSPOyzmyxxJ7LBhiB6o",
+        "name": "busername",
+        "comment": "",
+        "dataType": "VARCHAR(10)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 65,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901653950,
+          "createAt": 1771901563623
+        }
+      },
+      "u5ZRDuH-Ur3EBWBtIPhQ0": {
+        "id": "u5ZRDuH-Ur3EBWBtIPhQ0",
+        "tableId": "7hiSPOyzmyxxJ7LBhiB6o",
+        "name": "busertel",
+        "comment": "",
+        "dataType": "VARCHAR(15)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901644547,
+          "createAt": 1771901564078
+        }
+      },
+      "fSwTIzG-D9_V_VUCv9fxI": {
+        "id": "fSwTIzG-D9_V_VUCv9fxI",
+        "tableId": "7hiSPOyzmyxxJ7LBhiB6o",
+        "name": "",
+        "comment": "",
+        "dataType": "",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901564758,
+          "createAt": 1771901564758
+        }
+      },
+      "wcDy9I06GaS3hMm_g-cGr": {
+        "id": "wcDy9I06GaS3hMm_g-cGr",
+        "tableId": "6u15NmqCJK3AxemKXX5mp",
+        "name": "jikwonno",
+        "comment": "",
+        "dataType": "INT",
+        "default": "",
+        "options": 10,
+        "ui": {
+          "keys": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901763870,
+          "createAt": 1771901718241
+        }
+      },
+      "x_vpnL4X6sPayQZ4POTH0": {
+        "id": "x_vpnL4X6sPayQZ4POTH0",
+        "tableId": "6u15NmqCJK3AxemKXX5mp",
+        "name": "jikwonnname",
+        "comment": "",
+        "dataType": "VARCHAR(10)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 76,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901739701,
+          "createAt": 1771901725309
+        }
+      },
+      "gKq8IbLmGb_UEH_8zxG_g": {
+        "id": "gKq8IbLmGb_UEH_8zxG_g",
+        "tableId": "6u15NmqCJK3AxemKXX5mp",
+        "name": "jikwonjik",
+        "comment": "",
+        "dataType": "CHAR(10)",
+        "default": "사원",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771901772533,
+          "createAt": 1771901740501
+        }
+      },
+      "jrtxGi7AY9Q2J_OzSlUWF": {
+        "id": "jrtxGi7AY9Q2J_OzSlUWF",
+        "tableId": "6u15NmqCJK3AxemKXX5mp",
+        "name": "busernum",
+        "comment": "",
+        "dataType": "INT",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1771902073967,
+          "createAt": 1771901863672
+        }
+      }
+    },
+    "relationshipEntities": {
+      "_DTFwEMvNs0u7OFkxg5QK": {
+        "id": "_DTFwEMvNs0u7OFkxg5QK",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "start": {
+          "tableId": "7hiSPOyzmyxxJ7LBhiB6o",
+          "columnIds": [
+            "LEjAIBFbtGTI-2H2Am88D"
+          ],
+          "x": 395.5,
+          "y": 229,
+          "direction": 8
+        },
+        "end": {
+          "tableId": "6u15NmqCJK3AxemKXX5mp",
+          "columnIds": [
+            "jrtxGi7AY9Q2J_OzSlUWF"
+          ],
+          "x": 396,
+          "y": 361,
+          "direction": 4
+        },
+        "meta": {
+          "updateAt": 1771901863673,
+          "createAt": 1771901863673
+        }
+      }
+    },
+    "indexEntities": {},
+    "indexColumnEntities": {},
+    "memoEntities": {}
+  }
+}

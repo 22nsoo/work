@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ** 자바 스크립트 : 클라이언트 사이드 스크립트 **<br>
+    <script>
+    window.document.write("환영합니다. JS 세상");   //브라우저 출력 - 한줄 주석
+    console.log("개발자를 위해 표준 출력 장치로 출력");
+    document.write("<h2>브라우저에 문자열 출력</h2>");
+    
+    </script>      
+    다시 html로 나옴<br>
+    --변수와 연산자--<br>
+    <script type="text/javascript">
+        let aa;             //모던한 변수 선언     /*여러 줄 주석*/
+        aa = 100;
+        let bb = 20.5;
+        const cc = 300;     //모던한 변수 선언(상수) 
+        bb = bb + 10;
+        // cc = cc +10;      //err : 수정 불가
+        let dd = false;
+        let msg = "변수 이해"
+        document.write(aa," ", bb," ", cc, " ", dd, " ", msg);
+        document.write("<hr>");
+        document.write("type 확인 : ",typeof(1),' ',typeof(-1.5), " ", typeof(true), " ", typeof(null), " ", typeof(undefined));
+        {   //영역 확보(영역 안에서 변수를 선언하면 지역변수가 된다.)
+            let v1 = 1;                 //지역변수                  //var v1 = 1; 이건 전역변수
+            document.write("<br>", v1);
+            {
+                let v2 =2;
+                document.write("<br>", v1,' ', v2);
+                {
+                
+                    let v3 = 3;
+                    document.write("<br>", v1,' ', v2, ' ', v3);
+                }
+            }
+        }
+        // document.write("<br>", v1,' ', v2, ' ', v3);         --err : 영역 밖에서 지역변수 참조
+    </script>  
+    <br>--연산자--<br>
+
+    <script>
+        let x = 5; y =2;
+        document.write("<br>",x, " ", y);
+        document.write("<br>", x+y, " ", x/y, " ", x%y);
+        document.write("<br>관계 (비교)연산");
+        document.write("<br> 논리 연산", x>y && x<y, x==y||x<=y);
+        document.write("<br> 누적 연산 : ", x=x+1, x++, x+=1);
+        document.write("<br>삼항 연산: ", (x,y)?1000:1000+2000);
+        // 연산자 우선순위 파이썬과 동일
+
+        document.write("<br>"+"a"+"b"+"c");
+        let m, b, c;
+        m = b = c =  6+5;           //할당 연산 체이닝
+        document.write("<br>",m," ", b, " ",c);
+
+        
+    </script>
+</body>
+</html>

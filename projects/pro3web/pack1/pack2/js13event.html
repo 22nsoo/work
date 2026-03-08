@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Event Practice</title>
+
+<script>
+    function func1() {
+    document.getElementById("show").innerHTML = "<hr>전통적인 이벤트 처리";
+    }
+
+    let a = 10;
+
+    let b = {
+    funcNew1: function () {
+        document.getElementById("show").innerHTML = "<hr>b 객체의 메소드 처리";
+    },
+    funcNew2: function () {
+        document.getElementById("show").innerHTML =
+        "<hr><h1>b 객체의 멤버 수행 처리</h1>";
+    },
+    };
+</script>
+
+<script>
+    window.onload = function () {
+    alert("ok");
+
+    const exBtn1 = document.getElementById("btn1");
+    exBtn1.onclick = function () {
+        document.getElementById("show").innerHTML = "클릭 1 선택";
+    };
+
+      const exBtn2 = document.getElementsByName("myBtn"); // NodeList
+    console.log(exBtn2.length);
+
+    exBtn2[0].onclick = function () {
+        document.getElementById("show").innerHTML = "<i>클릭 2 누름</i>";
+    };
+
+    exBtn2[1].onclick = function () {
+        document.getElementById("show").innerHTML = "<i>클릭 3 누르다니</i>";
+    };
+
+      const exBtn4 = document.getElementsByTagName("button")[3]; // btn4
+    exBtn4.onclick = function () {
+        document.getElementById("show").innerHTML = "<b>클릭 4 선택함</b>";
+    };
+
+      // addEventListener 방식 + 제거
+    document.getElementById("btn5").addEventListener("click", abcFunc);
+    };
+
+    function abcFunc() {
+    document.getElementById("show").innerHTML = "클릭5 이벤트 연결 처리";
+
+      // 이벤트 해제 (한 번만 실행되는 버튼 만들기)
+    document.getElementById("btn5").removeEventListener("click", abcFunc);
+    }
+</script>
+</head>
+
+<body>
+<h2>이벤트 처리 : 이벤트 핸들러 연결</h2>
+
+<input type="button" value="버튼1" onclick="func1()" /><br />
+<input type="button" value="버튼2" onclick="b.funcNew1()" /><br />
+<input type="button" value="버튼3" onclick="b.funcNew2()" /><br />
+
+<div id="show"></div>
+<hr />
+
+<button id="btn1">클릭1</button><br />
+<button id="btn2" name="myBtn">클릭2</button><br />
+<button id="btn3" name="myBtn">클릭3</button><br />
+<button id="btn4">클릭4</button><br />
+<button id="btn5">클릭5</button><br />
+</body>
+</html>
