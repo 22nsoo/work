@@ -14,3 +14,33 @@ plt.scatter(x,y)
 plt.show()
 print(np.corrcoef(x,y)[0,1])
 
+# 선형회귀모델을 적용
+from sklearn.linear_model import LinearRegression
+x = x[:, np.newaxis]                # 차원 확대. 1차원을 2차원으로 변환
+model = LinearRegression().fit(x,y)
+ypred = model.predict(x)
+print('예측값 y : ', ypred)
+print('결정계수 : ', r2_score(y,ypred))
+
+plt.scatter(x,y)
+plt.plot(x,ypred,c='red')
+plt.show()
+
+# 비선형 모델 작성
+# 여러방법중 가장 일반적인 방법을 사용(PolynominalFeatures, log젼환, curve_fit...)
+from sklearn.preprocessing import PolynomialFeatures
+
+poly = PolynomialFeatures(degree=2, include_bias=False)
+x2 = poly.fit_transform(x)          # 특징 행렬을 만듦
+print(x)        # 5 by 1
+print(x2)       # 5 by 2
+
+model2 = LinearRegression().fit(x2,y)
+ypred2 = model2.predict(x2)
+print(ypred2)
+print('예측값 y : ', ypred2)
+print('결정계수 : ', r2_score(y,ypred2))
+
+plt.scatter(x,y)
+plt.plot(x,ypred2,c='red')
+plt.show()
