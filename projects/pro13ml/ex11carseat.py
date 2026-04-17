@@ -160,3 +160,4 @@ new_df = pd.DataFrame({'Income':[35,62], 'Advertising':[6,3], 'Price':[105,88], 
 pred = mymodel.predict(new_df)
 print('Sales 예측 결과 : ', pred.values)
 # Sales 예측 결과 :  [8.71289759 8.49715914]
+

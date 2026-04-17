@@ -44,7 +44,7 @@ def myRegScoreFunc(y_true, y_pred):
     # 오차를 제곱해 평균 구함( 오차가 커질수록 손실함수 값이 빠르게 증가함. 값이 작으면 모델 성능 우수
     print(f'mean_squared_error(MSE, 평균제곱오차) : {mean_squared_error(y_true, y_pred)}')
     imsi = mean_squared_error(y_true, y_pred)          #RMSE로 변환해서 확인
-    print(f'mean_squared_error(MSE, 평균제곱오차) : {np.sqrt(imsi)}')   # 9.28159
+    print(f'root smean_squared_error(RMSE, 평균제곱오차의 제곱근) : {np.sqrt(imsi)}')   # 9.28159
 
 myRegScoreFunc(y, y_pred)       # 실제 값, 예측 값
 
@@ -61,4 +61,6 @@ model2 = LinearRegression().fit(x_scaled2,y2)
 print('model : ', model2)
 print('회귀계수(slope) : ', model2.coef_)
 print('회귀계수(intercept, bias) : ', model2.intercept_)
-print('결정계수(R^2) : ', model2.score(x_scaled2, y2))
+print('결정계수(R^2) : ', model2.score(x_scaled2, y2))          # 0.003007
+# 분산이 너무 큰 모델을 그대로 사용하는 것은 의미가 없다.
+

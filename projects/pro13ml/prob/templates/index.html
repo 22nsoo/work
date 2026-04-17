@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>근무년수 → 예상 연봉</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        .box {
+            background: #f3f3f3;
+            padding: 20px;
+            margin-top: 20px;
+            width: 800px;
+        }
+        input[type=text] {
+            width: 300px;
+            height: 35px;
+            font-size: 20px;
+            padding: 5px;
+        }
+        button {
+            height: 50px;
+            width: 100px;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 30px;
+            width: 800px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 14px;
+            font-size: 24px;
+            text-align: left;
+        }
+        .result-line {
+            font-size: 28px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>근무년수 → 예상 연봉(LinearRegression)</h1>
+
+    <div style="margin-top:30px;">
+        <label style="font-size:32px;">근무년수 : </label>
+        <input type="text" id="years" name="years" placeholder="예: 3">
+        <button id="btnPredict">확인</button>
+    </div>
+
+    <div class="box" id="resultBox" style="display:none;">
+        <div class="result-line">예상연봉액 : <b id="predictedPay"></b></div>
+        <div class="result-line">설명력(R²) : <b id="r2Value"></b></div>
+        <div class="result-line">회귀식 : <b id="formula"></b></div>
+    </div>
+
+    <h1 style="margin-top:50px;">직급별 연봉평균</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>직급</th>
+                <th>평균 연봉</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in job_avg %}
+            <tr>
+                <td>{{ row.jik }}</td>
+                <td>{{ "{:,}".format(row.pay) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        $('#btnPredict').on('click', function() {
+            const years = $('#years').val();
+
+            $.ajax({
+                url: '/predict',
+                type: 'POST',
+                data: { years: years },
+                success: function(res) {
+                    if (res.success) {
+                        $('#resultBox').show();
+                        $('#predictedPay').text(res.predicted_pay);
+                        $('#r2Value').text(res.r2 + '%');
+                        $('#formula').text(
+                            'pay = ' + res.coef + ' * years + ' + res.intercept
+                        );
+                    } else {
+                        alert(res.message);
+                    }
+                },
+                error: function() {
+                    alert('서버 처리 중 오류가 발생했습니다.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
